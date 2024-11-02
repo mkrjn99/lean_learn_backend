@@ -11,7 +11,7 @@ class KnowledgeBaseImpl implements KnowledgeBase {
     }
 
     public void printAllKnowledge() {
-        try(PrintWriter fw = new PrintWriter(new FileWriter("output.txt"))){
+        try(PrintWriter fw = new PrintWriter(new FileWriter("output.txt", /* append mode =  */ true))){
             for(String statement:statements) {
                 fw.println(statement);
             }
