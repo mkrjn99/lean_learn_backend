@@ -18,5 +18,6 @@ class KnowledgeBaseImpl implements KnowledgeBase {
         } catch (IOException e) {
             System.err.println("An IOException occurred: " + e.getMessage());
         }
+        statements.clear();
     }
 }
