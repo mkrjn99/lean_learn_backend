@@ -1,0 +1,58 @@
+info:
+  description: API for feeding knowledge and answering Fibonacci questions.
+  title: Knowledge Base API
+  version: 1.0.0
+openapi: 3.0.0
+paths:
+  /answer_fib:
+    get:
+      description: Returns a placeholder Fibonacci answer.
+      responses:
+        '200':
+          content:
+            text/plain:
+              schema:
+                example: Fibonacci answer
+                type: string
+          description: Fibonacci answer retrieved successfully.
+        '405':
+          description: Method Not Allowed
+      summary: Get Fibonacci Answer
+  /feed_knowledge:
+    post:
+      description: Feeds knowledge into the knowledge base.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: JSON string representing the knowledge to be fed.
+              type: string
+        required: true
+      responses:
+        '200':
+          content:
+            text/plain:
+              schema:
+                example: Knowledge fed
+                type: string
+          description: Knowledge fed successfully.
+        '405':
+          description: Method Not Allowed
+      summary: Feed Knowledge
+  /print_all_knowledge:
+    post:
+      description: Prints all knowledge in the console.
+      responses:
+        '200':
+          content:
+            text/plain:
+              schema:
+                example: Knowledge printed on console
+                type: string
+          description: Knowledge printed successfully.
+        '405':
+          description: Method Not Allowed
+      summary: Print All Knowledge
+servers:
+- description: Local server
+  url: http://localhost:8000
