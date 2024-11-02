@@ -2,5 +2,3 @@ Electromagnetism is the study of electrical and magnetic fields
 Newton discovered gravity
 Newton's second law states that force is the rate of change of momentum.
 Every action has an equal and opposite reaction.
-Arjun has a mass of 70kg.
-Mayank has a mass of 64kg.
